@@ -1,0 +1,80 @@
+/* css/components/newsletter.css */
+
+/* R1: Franja de 320 px, fondo --color-sand */
+.newsletter {
+  background-color: var(--color-sand);
+  height: 320px;
+  position: relative; /* Para poder fijar los granos de café a los lados */
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Evita que las imágenes laterales generen scroll horizontal */
+}
+
+/* R1: Imágenes decorativas de granos a los lados */
+.newsletter__img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.newsletter__img--left {
+  left: 0;
+}
+
+.newsletter__img--right {
+  right: 0;
+  /* El HTML ya tiene el style="transform: scaleX(-1);" para espejarlo, 
+     pero lo aseguramos aquí combinándolo con el centrado vertical */
+  transform: translateY(-50%) scaleX(-1) !important; 
+}
+
+/* Contenedor central (debe estar por encima de los granos) */
+.newsletter__container {
+  position: relative;
+  z-index: 2; 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.newsletter__content {
+  text-align: center;
+}
+
+/* R2: Título Poppins 600 32 px --color-espresso */
+.newsletter__title {
+  font-family: var(--font-ui);
+  font-size: 32px; /* o var(--fs-h2) */
+  font-weight: 600;
+  color: var(--color-espresso);
+  margin-bottom: var(--space-2);
+}
+
+/* R2: Subtítulo Poppins 500 16 px --color-espresso */
+.newsletter__subtitle {
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  color: var(--color-espresso);
+  margin-bottom: var(--space-6);
+}
+
+/* R3: Formulario en línea con gap de 12 px */
+.newsletter__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Grupo para poder superponer el ícono del sobre al input */
+.newsletter__input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Ícono del sobre absolute adentro del input */
+.newsletter__mail-icon {
+  position: absolute;

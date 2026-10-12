@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Página no encontrada | Coffea</title>
+  
+  <!-- Vinculamos tu archivo principal para que tome tus variables de color y tipografía -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Estilos específicos para esta página suelta -->
+  <style>
+    .not-found {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--color-sand);
+      color: var(--color-espresso);
+      padding: var(--space-4);
+    }
+
+    .not-found__title {
+      font-family: var(--font-display);
+      font-size: 150px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .not-found__subtitle {
+      font-family: var(--font-body);
+      font-size: var(--fs-h2);
+      font-weight: 600;
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+
+    .not-found__text {
+      font-family: var(--font-ui);
+      font-size: var(--fs-md);
+      margin-bottom: 40px;
+      color: var(--color-muted);
+    }
+
+    /* Usamos un diseño similar al botón de tu Hero */
+    .not-found__btn {
+      display: inline-block;
+      background-color: var(--color-espresso);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: var(--fs-md);
+      font-weight: 500;
+      padding: 16px 40px;
+      border-radius: var(--radius-pill);
+      transition: transform 200ms ease, opacity 200ms ease;
+    }
+
+    .not-found__btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="not-found">
+    <h1 class="not-found__title">404</h1>
+    <h2 class="not-found__subtitle">Oops! Page Not Found</h2>
+    <p class="not-found__text">Parece que alguien se tomó este café. La página que buscas no existe.</p>
+    
+    <!-- El enlace "/" lleva automáticamente al index.html del sitio -->
+    <a href="/" class="not-found__btn">Volver al Inicio</a>
+  </main>
+
+</body>
+</html>

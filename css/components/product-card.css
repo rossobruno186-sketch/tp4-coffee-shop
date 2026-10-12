@@ -1,0 +1,124 @@
+/* css/components/product-card.css */
+
+/* R4: Fondo, borde y radio de la tarjeta[cite: 5] */
+.product-card {
+  background-color: var(--color-sand-20);
+  border: 1.5px solid var(--color-sand);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow 200ms ease;
+}
+
+/* Contenedor de la foto con overflow hidden para que no se salga el zoom de la foto[cite: 9] */
+.product-card__header {
+  position: relative;
+  border-radius: var(--radius-img);
+  overflow: hidden; 
+}
+
+/* R5: Imagen 334x364 px[cite: 5] */
+.product-card__img {
+  width: 100%;
+  max-width: 334px;
+  height: 364px;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+/* 
+ * FAVORITO SIN JS (Checkbox hack)[cite: 9]
+ * R5: Corazón a 18px de los bordes arriba a la derecha[cite: 5]
+ */
+.product-card__favorite {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 200ms ease;
+}
+
+.product-card__favorite:hover {
+  transform: scale(1.1);
+}
+
+/* Cuando el checkbox oculto está marcado, cambiamos la imagen del corazón al relleno[cite: 9] */
+.product-card__fav-input:checked + .product-card__favorite .product-card__fav-icon {
+  /* Asegúrate de tener exportado heart-filled.svg o la variante rellena como pide el doc */
+  content: url('../../assets/icons/heart-filled.png');
+}
+
+/* Contenedor del texto inferior */
+.product-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* R6: Nombre (Outfit 600 38 px)[cite: 5] */
+.product-card__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-card-title);
+  font-weight: 600;
+  color: var(--color-espresso);
+}
+
+/* R6: Descripción (Outfit 400 20/28 px --color-maroon)[cite: 5] */
+.product-card__desc {
+  font-family: var(--font-body);
+  font-size: 20px; /* o var(--fs-lg) */
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--color-maroon);
+}
+
+/* Fila inferior de precio y botón */
+.product-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px; /* Un poco de respiro antes del footer de la card */
+}
+
+/* R6: Precio Poppins 600 20 px --color-maroon[cite: 5] */
+.product-card__price {
+  font-family: var(--font-ui);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-maroon);
+}
+
+/* R6: Botón --color-maroon radio 8 px padding 10x26 px texto Poppins 500 14 px blanco[cite: 5] */
+.product-card__btn {
+  background-color: var(--color-maroon);
+  color: var(--color-white);
+  border-radius: var(--radius-btn);
+  padding: 10px 26px;
+  font-family: var(--font-ui);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  transition: opacity 200ms ease;
+}
+
+.product-card__btn:hover {
+  opacity: 0.9;
+}
+
+/* 
+ * HOVER DE CARDS (Sección 8)[cite: 9]
+ * Solo se aplica en dispositivos que soportan hover (mouse), no en táctiles.
+ */
+@media (hover: hover) {
+  .product-card:hover {
+    box-shadow: 0 10px 30px rgba(48, 38, 28, 0.08); /* Leve elevación */
+  }
+  
+  .product-card:hover .product-card__img {
+    transform: scale(1.03); /* Zoom de la imagen[cite: 9] */
+  }
+}

@@ -1,0 +1,86 @@
+/* css/components/hero.css */
+
+/* R1: Alto 1000 px en desktop, fondo = imagen del espresso alineada a la derecha[cite: 5] */
+.hero {
+  position: relative;
+  /* Altura de pantalla completa, pero topada en 1000px como pide el PRD */
+  min-height: 100vh;
+  max-height: 1000px;
+  
+  /* IMPORTANTE: Ajusta la extensión a .jpg si guardaste la foto así en lugar de .avif */
+  background-image: url('../../assets/img/hero.png'); 
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  display: flex;
+  align-items: flex-start;
+  color: var(--color-white);
+}
+
+/* Criterio de Aceptación: Overlay oscuro para asegurar el contraste de los textos blancos[cite: 5] */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Filtro negro al 40% */
+  z-index: 1;
+}
+
+/* R2: Bloque de texto de 557 px de ancho, a 294 px del borde superior[cite: 5] */
+.hero__content {
+  position: relative;
+  z-index: 2; /* Mantiene el texto por encima del filtro oscuro */
+  max-width: 557px;
+  padding-top: 294px;
+}
+
+/* R3: Eyebrow "WELCOME" (Outfit 500 20 px, tracking 4px)[cite: 5] */
+.hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* R3: Título H1 (Playfair 700 72/82 px)[cite: 5] */
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  line-height: 82px; /* o 1.13 */
+  margin-bottom: 56px;
+}
+
+/* R3: Párrafo (Outfit 400 18/26 px, máx. 431 px)[cite: 5] */
+.hero__text {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: 400;
+  line-height: 26px; /* o 1.44 */
+  max-width: 431px;
+  margin-bottom: 56px;
+}
+
+/* R4: Botón "Order Now" blanco, radio pill[cite: 5] */
+.hero__btn {
+  display: inline-block;
+  background-color: var(--color-white);
+  color: var(--color-espresso);
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  padding: 16px 40px;
+  border-radius: var(--radius-pill);
+  transition: transform 200ms ease;
+}
+
+/* Interacción de hover sugerida[cite: 9] */
+.hero__btn:hover {
+  transform: translateY(-2px);
+}

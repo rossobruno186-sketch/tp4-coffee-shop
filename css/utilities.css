@@ -1,0 +1,39 @@
+/* css/utilities.css */
+
+/* Ocultar visualmente pero disponible para lectores de pantalla */
+.sr-only,
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Botón para saltar al contenido principal (Accesibilidad) */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--color-espresso);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  z-index: 999;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Respetar preferencias del usuario para animaciones */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

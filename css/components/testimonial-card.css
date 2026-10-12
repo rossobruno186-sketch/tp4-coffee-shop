@@ -1,0 +1,143 @@
+/* css/components/testimonial-card.css */
+
+/* Espaciado general de la sección y centrado del título doble */
+.testimonials {
+  padding-block: var(--space-10); /* Ajustar según veas el margen en Figma */
+}
+
+.testimonials__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.testimonials__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  color: var(--color-maroon);
+  margin-bottom: var(--space-2);
+}
+
+.testimonials__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--color-espresso);
+}
+
+/* Grilla para alinear las 3 tarjetas en escritorio */
+.testimonials__grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+/* Tarjeta individual base */
+.testimonial-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-sand);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  width: 100%;
+  max-width: 416px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: box-shadow 200ms ease;
+}
+
+/* Tarjeta destacada (la del centro, como pide el diseño) */
+.testimonial-card--featured {
+  background-color: var(--color-espresso);
+  color: var(--color-white);
+  border-color: var(--color-espresso);
+  box-shadow: 0 16px 32px rgba(48, 38, 28, 0.15);
+  transform: scale(1.02); /* La hace apenas más grande para que resalte */
+}
+
+/* Forzamos el texto blanco solo en la tarjeta destacada */
+.testimonial-card--featured .testimonial-card__name,
+.testimonial-card--featured .testimonial-card__role,
+.testimonial-card--featured .testimonial-card__text {
+  color: var(--color-white);
+}
+
+/* Cabecera de la tarjeta: Foto, Nombre, Rol y Estrellas */
+.testimonial-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Foto del cliente circular */
+.testimonial-card__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card__name {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--color-espresso);
+}
+
+.testimonial-card__role {
+  font-family: var(--font-ui);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+/* Empuja las estrellas hacia la derecha automáticamente */
+.testimonial-card__rating {
+  margin-left: auto; 
+}
+
+/* Texto del testimonio */
+.testimonial-card__text {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--color-espresso);
+  margin: 0; /* Limpiamos el margen por defecto del blockquote */
+}
+
+/* Paginador (Puntitos interactivos sin JS)[cite: 8] */
+.testimonials__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.testimonials__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-sand);
+  transition: background-color 200ms ease;
+}
+
+.testimonials__dot:hover,
+.testimonials__dot:active {
+  background-color: var(--color-espresso);
+}
+/* --- ADAPTACIÓN PARA MÓVILES --- */
+@media (max-width: 768px) {
+  .testimonials__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonial-card--featured {
+    transform: none; /* Quitamos el efecto de agrandado en móvil para que no se desborde */
+  }
+}

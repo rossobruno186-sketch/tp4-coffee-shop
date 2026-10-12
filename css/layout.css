@@ -1,0 +1,36 @@
+/* css/layout.css */
+/* Grid de secciones principal */
+main {
+  display: grid;
+  gap: var(--space-14); /* Espaciado genérico entre secciones, ajustar según diseño */
+}
+
+/* Clase contenedor transversal */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  /* Configuración mobile (base) */
+  padding-inline: 16px; 
+}
+
+/* Breakpoint md (Tablet) */
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 32px;
+  }
+}
+
+/* Breakpoint lg (Desktop pequeño) */
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: 48px;
+  }
+}
+
+/* Breakpoint xl (Desktop diseño original) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--container); /* 1444px */
+    padding-inline: 0; /* Ya está centrado por el ancho máximo */
+  }
+}

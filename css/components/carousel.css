@@ -1,0 +1,74 @@
+/* css/components/carousel.css */
+
+/* Contenedor relativo para poder posicionar las flechas a los costados */
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+ * El track o "pista" donde corren las tarjetas.
+ * Se usa Flexbox para ponerlas en fila y scroll-snap para la interacción sin JS.
+ */
+.carousel__track {
+  display: flex;
+  gap: var(--space-1); /* R2: gap de 4 px[cite: 5] */
+  width: 100%;
+  max-width: 1476px; /* R2: carrusel centrado en 1476 px[cite: 5] */
+  
+  /* Interacción CSS-only (Sección 8)[cite: 9] */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  
+  /* Ocultar barra de scroll nativa[cite: 9] */
+  scrollbar-width: none; /* Firefox */
+  padding-bottom: 10px; /* Previene recortes visuales de sombras si las hay */
+}
+
+/* Soporte extra para ocultar scrollbar en Chrome/Safari/Edge */
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cada tarjeta dentro del carrusel */
+.carousel__item {
+  /* Evita que la tarjeta se achique para caber en la pantalla */
+  flex: 0 0 auto; 
+  /* Interacción CSS-only: punto de anclaje al hacer swipe[cite: 9] */
+  scroll-snap-align: start; 
+}
+
+/* R3: Flechas circulares de 71 px, verticalmente centradas[cite: 5] */
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 71px;
+  height: 71px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+/* Hover accesible para las flechas */
+.carousel__arrow:hover {
+  opacity: 0.8;
+  /* El scale(1.05) da un efecto de agrandado suave, combinándose con el translateY */
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* R3: Posicionadas a 80 px de cada borde[cite: 5] */
+.carousel__arrow--prev {
+  left: 80px; 
+}
+
+.carousel__arrow--next {
+  right: 80px;
+}

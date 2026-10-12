@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffea - Landing Page</title>
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="header__logo">Coffea</a>
+      <nav class="header__nav" aria-label="Navegación principal">
+        <ul class="header__menu">
+          <li><a href="#main" class="header__link">Home</a></li>
+          <li><a href="#coffee-title" class="header__link">Menu</a></li>
+          <li><a href="#promo" class="header__link">About</a></li>
+          <li><a href="#testimonials-title" class="header__link">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__container">
+        <h1 id="hero-title" class="hero__title">Start Your Day With Coffee</h1>
+        <p class="hero__desc">Boost your productivity and build your mood with a cup of coffee</p>
+        <a href="#coffee-title" class="hero__btn">Order Now</a>
+      </div>
+    </section>
+    
+    <!-- Categories Section -->
+    <section class="categories" aria-label="Categorías">
+      <div class="container categories__container">
+        <ul class="categories__list">
+          <li class="categories__item">
+            <a href="#" class="categories__link">
+              <img src="assets/icons/cat-1.png" alt="" class="categories__icon">
+              <span class="categories__label">Hot Coffee</span>
+            </a>
+          </li>
+          <li class="categories__item">
+            <a href="#" class="categories__link">
+              <img src="assets/icons/cat-2.png" alt="" class="categories__icon">
+              <span class="categories__label">Cold Coffee</span>
+            </a>
+          </li>
+          <li class="categories__item">
+            <a href="#" class="categories__link">
+              <img src="assets/icons/cat-3.png" alt="" class="categories__icon">
+              <span class="categories__label">Cup Coffee</span>
+            </a>
+          </li>
+          <li class="categories__item">
+            <a href="#" class="categories__link">
+              <img src="assets/icons/cat-4.png" alt="" class="categories__icon">
+              <span class="categories__label">Dessert</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="products" aria-labelledby="coffee-title">
+      <div class="container products__container">
+        <h2 id="coffee-title" class="products__title">OUR SPECIAL COFFEE</h2>
+        
+        <div class="carousel">
+          <!-- Flecha Izquierda -->
+          <a href="#coffee-1" class="carousel__arrow carousel__arrow--prev" aria-label="Anterior">
+            <img src="assets/icons/arrow-left.png" alt="">
+          </a>
+
+          <div class="carousel__track">
+            <!-- Tarjeta de Producto 1 -->
+            <article id="coffee-1" class="product-card carousel__item">
+              <div class="product-card__header">
+                <img src="assets/img/coffee-1.png" alt="Lungo coffee" class="product-card__img" loading="lazy" decoding="async">
+                <input type="checkbox" id="fav-c1" class="product-card__fav-input visually-hidden" aria-label="Marcar como favorito">
+                <label for="fav-c1" class="product-card__favorite">
+                  <img src="assets/icons/heart.png" alt="" class="product-card__fav-icon">
+                </label>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Lungo coffee</h3>
+                <p class="product-card__desc">Coffee is a brewed drink prepared from roasted coffee beans</p>
+                <div class="product-card__footer">
+                  <data value="200" class="product-card__price">Rs. 200</data>
+                  <button type="button" class="product-card__btn">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tarjeta de Producto 2 -->
+            <article id="coffee-2" class="product-card carousel__item">
+              <div class="product-card__header">
+                <img src="assets/img/coffee-2.png" alt="Drip Coffee" class="product-card__img" loading="lazy" decoding="async">
+                <input type="checkbox" id="fav-c2" class="product-card__fav-input visually-hidden" aria-label="Marcar como favorito">
+                <label for="fav-c2" class="product-card__favorite">
+                  <img src="assets/icons/heart.png" alt="" class="product-card__fav-icon">
+                </label>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Drip Coffee</h3>
+                <p class="product-card__desc">Coffee is a brewed drink prepared from roasted coffee beans</p>
+                <div class="product-card__footer">
+                  <data value="250" class="product-card__price">Rs. 250</data>
+                  <button type="button" class="product-card__btn">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tarjeta de Producto 3 -->
+            <article id="coffee-3" class="product-card carousel__item">
+              <div class="product-card__header">
+                <img src="assets/img/coffee-3.png" alt="Coffee Latte" class="product-card__img" loading="lazy" decoding="async">
+                <input type="checkbox" id="fav-c3" class="product-card__fav-input visually-hidden" aria-label="Marcar como favorito">
+                <label for="fav-c3" class="product-card__favorite">
+                  <img src="assets/icons/heart.png" alt="" class="product-card__fav-icon">
+                </label>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Coffee Latte</h3>
+                <p class="product-card__desc">Coffee is a brewed drink prepared from roasted coffee beans</p>
+                <div class="product-card__footer">
+                  <data value="300" class="product-card__price">Rs. 300</data>
+                  <button type="button" class="product-card__btn">Order Now</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tarjeta de Producto 4 -->
+            <article id="coffee-4" class="product-card carousel__item">
+              <div class="product-card__header">
+                <img src="assets/img/coffee-4.png" alt="Americano" class="product-card__img" loading="lazy" decoding="async">
+                <input type="checkbox" id="fav-c4" class="product-card__fav-input visually-hidden" aria-label="Marcar como favorito">
+                <label for="fav-c4" class="product-card__favorite">
+                  <img src="assets/icons/heart.png" alt="" class="product-card__fav-icon">
+                </label>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Americano</h3>
+                <p class="product-card__desc">Coffee is a brewed drink prepared from roasted coffee beans</p>
+                <div class="product-card__footer">
+                  <data value="180" class="product-card__price">Rs. 180</data>
+                  <button type="button" class="product-card__btn">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Flecha Derecha -->
+          <a href="#coffee-4" class="carousel__arrow carousel__arrow--next" aria-label="Siguiente">
+            <img src="assets/icons/arrow-right.png" alt="">
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Promo Section -->
+    <section id="promo" class="promo">
+      <img src="assets/img/beans-left.png" alt="" class="promo__img promo__img--left" loading="lazy" decoding="async">
+      <img src="assets/img/beans-right.png" alt="" class="promo__img promo__img--right" loading="lazy" decoding="async">
+
+      <div class="container promo__container">
+        <div class="promo__content">
+          <h2 class="promo__title">Check Out Our Best Coffee Beans</h2>
+          <a href="#" class="promo__btn">
+            Explore Our Products
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container testimonials__container">
+        <div class="testimonials__header">
+          <p class="testimonials__subtitle">Come and Join</p>
+          <h2 id="testimonials-title" class="testimonials__title">OUR HAPPY CUSTOMERS</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <!-- Testimonio 1 -->
+          <figure class="testimonial-card" id="t-1">
+            <figcaption class="testimonial-card__header">
+              <img src="assets/img/testimonial-1.png" alt="" class="testimonial-card__avatar" loading="lazy" decoding="async">
+              <div class="testimonial-card__info">
+                <span class="testimonial-card__name">James Smith</span>
+                <span class="testimonial-card__role">Entrepreneur</span>
+              </div>
+              <img src="assets/icons/star.png" alt="5 de 5 estrellas" class="testimonial-card__rating">
+            </figcaption>
+            <blockquote class="testimonial-card__text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </blockquote>
+          </figure>
+
+          <!-- Testimonio 2 -->
+          <figure class="testimonial-card testimonial-card--featured" id="t-2">
+            <figcaption class="testimonial-card__header">
+              <img src="assets/img/testimonial-2.png" alt="" class="testimonial-card__avatar" loading="lazy" decoding="async">
+              <div class="testimonial-card__info">
+                <span class="testimonial-card__name">Laura Johnson</span>
+                <span class="testimonial-card__role">Designer</span>
+              </div>
+              <img src="assets/icons/star.png" alt="5 de 5 estrellas" class="testimonial-card__rating">
+            </figcaption>
+            <blockquote class="testimonial-card__text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </blockquote>
+          </figure>
+
+          <!-- Testimonio 3 -->
+          <figure class="testimonial-card" id="t-3">
+            <figcaption class="testimonial-card__header">
+              <img src="assets/img/testimonial-3.png" alt="" class="testimonial-card__avatar" loading="lazy" decoding="async">
+              <div class="testimonial-card__info">
+                <span class="testimonial-card__name">Michael Brown</span>
+                <span class="testimonial-card__role">Developer</span>
+              </div>
+              <img src="assets/icons/star.png" alt="5 de 5 estrellas" class="testimonial-card__rating">
+            </figcaption>
+            <blockquote class="testimonial-card__text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </blockquote>
+          </figure>
+        </div>
+
+        <!-- Paginador CSS-only -->
+        <div class="testimonials__pagination">
+          <a href="#t-1" aria-label="Ir al testimonio 1" class="testimonials__dot"></a>
+          <a href="#t-2" aria-label="Ir al testimonio 2" class="testimonials__dot"></a>
+          <a href="#t-3" aria-label="Ir al testimonio 3" class="testimonials__dot"></a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container newsletter__container">
+        <div class="newsletter__content">
+          <h2 class="newsletter__title">Subscribe to our Newsletter</h2>
+          <p class="newsletter__subtitle">Join in and get 15% off!</p>
+          
+          <form class="newsletter__form" action="#" method="POST" name="newsletter">
+            <label for="email" class="visually-hidden">Tu dirección de correo</label>
+            <div class="newsletter__input-group">
+              <img src="assets/icons/mail.png" alt="" class="newsletter__mail-icon">
+              <input type="email" id="email" name="email" class="newsletter__input" placeholder="Enter your email" required autocomplete="email">
+            </div>
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__col footer__col--logo">
+        <a href="#" class="footer__logo">Coffea</a>
+        <p class="footer__text">We serve the richest coffee in the city!</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Privacidad">
+        <h3 class="footer__title">PRIVACY</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Terms of use</a></li>
+          <li><a href="#" class="footer__link">Privacy policy</a></li>
+          <li><a href="#" class="footer__link">Cookies</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Servicios">
+        <h3 class="footer__title">SERVICES</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Shop</a></li>
+          <li><a href="#" class="footer__link">Order ahead</a></li>
+          <li><a href="#" class="footer__link">Menu</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Sobre nosotros">
+        <h3 class="footer__title">ABOUT US</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Find a location</a></li>
+          <li><a href="#" class="footer__link">About us</a></li>
+          <li><a href="#" class="footer__link">Our story</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Información">
+        <h3 class="footer__title">INFORMATION</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Plans & pricing</a></li>
+          <li><a href="#" class="footer__link">Sell your products</a></li>
+          <li><a href="#" class="footer__link">Jobs</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col footer__col--social">
+        <h3 class="footer__title">SOCIAL MEDIA</h3>
+        <ul class="footer__social-list">
+          <li>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <img src="assets/icons/instagram.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__social-link" aria-label="X (Twitter)">
+              <img src="assets/icons/twitter.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <img src="assets/icons/facebook.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <img src="assets/icons/linkedin.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

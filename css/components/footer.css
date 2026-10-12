@@ -1,0 +1,102 @@
+/* css/components/footer.css */
+
+/* R1: Fondo --color-espresso, 358 px, texto blanco[cite: 6] */
+.footer {
+  background-color: var(--color-espresso);
+  color: var(--color-white);
+  min-height: 358px;
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  padding-block: var(--space-10); /* Padding de resguardo */
+}
+
+/* Contenedor principal alineado en fila para escritorio */
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+  width: 100%;
+}
+
+/* Columna 1: Logo y texto */
+.footer__col--logo {
+  max-width: 250px;
+}
+
+.footer__logo {
+  font-family: var(--font-display);
+  font-size: var(--fs-logo);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+  display: inline-block;
+}
+
+.footer__text {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+}
+
+/* R2: Encabezado de columnas - Playfair 500 24 px uppercase[cite: 6] */
+.footer__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-footer-h);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+}
+
+/* R2: Links de navegación con separación vertical de 42 px[cite: 6] */
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 42px; 
+}
+
+/* Links individuales - Poppins 400 18 px[cite: 6] */
+.footer__link {
+  font-family: var(--font-ui);
+  font-size: var(--fs-md);
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.footer__link:hover {
+  opacity: 0.8;
+}
+
+/* R3: Columna SOCIAL MEDIA[cite: 6] */
+.footer__social-list {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* CA: Íconos sociales con área táctil >= 44x44 px (Requisito de Accesibilidad)[cite: 6] */
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  transition: transform 200ms ease;
+}
+
+/* R3: Tamaño visual del ícono a 24px[cite: 6] */
+.footer__social-link img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer__social-link:hover {
+  transform: translateY(-2px);
+}
+/* --- ADAPTACIÓN PARA MÓVILES --- */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

@@ -1,0 +1,92 @@
+/* css/components/promo.css */
+
+/* R1: Franja de 335 px, fondo --color-sand[cite: 5] */
+.promo {
+  background-color: var(--color-sand);
+  height: 335px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Evita scroll horizontal si las imágenes laterales sobresalen */
+}
+
+/* R1: Imágenes decorativas a la izquierda y derecha[cite: 5] */
+.promo__img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.promo__img--left {
+  left: 0;
+}
+
+.promo__img--right {
+  right: 0;
+}
+
+/* Contenedor central elevado sobre las imágenes de fondo */
+.promo__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* R2: Título Playfair 600 40/50 px, negro, máx. 372 px[cite: 5] */
+.promo__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-cta); /* 40px */
+  font-weight: 600;
+  line-height: 50px; /* o 1.25 */
+  color: #000000; /* El PRD especifica "negro" aquí en lugar de espresso[cite: 5] */
+  max-width: 372px;
+  margin-bottom: var(--space-6);
+}
+
+/* R3: Botón pill --color-espresso, 258x51 px, texto Outfit 500 16 px[cite: 5] */
+.promo__btn {
+  background-color: var(--color-espresso);
+  color: var(--color-bg);
+  width: 258px;
+  height: 51px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2); /* Separación entre el texto y el chevron */
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.promo__btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px); /* Sugerencia de interacción[cite: 9] */
+}
+
+/* Chevron icono dentro del botón */
+.promo__btn-icon {
+  width: 20px;
+  height: 20px;
+}
+/* --- ADAPTACIÓN PARA MÓVILES --- */
+@media (max-width: 768px) {
+  .promo {
+    height: auto;
+    padding-block: 64px;
+  }
+  .promo__img {
+    display: none; /* Oculta los granos y la mano en celular */
+  }
+}
